@@ -25,7 +25,26 @@ pod 'CCNPreferencesWindowController'
 
 
 ```Objective-C
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    // init the preferences window controller
+    self.preferences = [CCNPreferencesWindowController new];
+    self.preferences.centerToolbarItems = YES;	// or NO
+
+    // setup all preference view controllers
+    [self.preferences setPreferencesViewControllers:@[
+        [PreferencesGeneralViewController new],
+        [PreferencesNetworkViewController new],
+        [PreferencesBonjourViewController new]
+    ]];
+}
+
+
+- (IBAction)showPreferencesWindow:(id)sender {
+    [self.preferences showPreferencesWindow];
+}
 ```
+
+That's all.
 
 
 ## Requirements
