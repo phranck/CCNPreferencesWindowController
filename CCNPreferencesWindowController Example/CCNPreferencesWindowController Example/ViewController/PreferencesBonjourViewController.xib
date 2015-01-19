@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C99d" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PreferencesBonjourViewController">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLv-84-SzR">
+                    <rect key="frame" x="20" y="157" width="48" height="48"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSBonjour" id="vAM-Bi-30p"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1XY-eC-zqN">
+                    <rect key="frame" x="74" y="168" width="235" height="27"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bonjour" id="E7d-9Q-iN6">
+                        <font key="font" metaFont="system" size="23"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <tabView fixedFrame="YES" controlSize="mini" translatesAutoresizingMaskIntoConstraints="NO" id="2s2-oG-zTh">
+                    <rect key="frame" x="13" y="10" width="301" height="141"/>
+                    <font key="font" metaFont="miniSystem"/>
+                    <tabViewItems>
+                        <tabViewItem label="Tab" identifier="1" id="98H-cc-C4d">
+                            <view key="view" id="If8-0k-Vey">
+                                <rect key="frame" x="10" y="19" width="281" height="109"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                        </tabViewItem>
+                        <tabViewItem label="View" identifier="2" id="UWU-9A-65e">
+                            <view key="view" id="rGs-dP-sHD">
+                                <rect key="frame" x="10" y="33" width="157" height="78"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </view>
+                        </tabViewItem>
+                    </tabViewItems>
+                </tabView>
+            </subviews>
+            <point key="canvasLocation" x="402.5" y="359.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSBonjour" width="32" height="32"/>
+    </resources>
+</document>
