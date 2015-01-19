@@ -9,7 +9,7 @@
 
 Here is a shot of the included example application:
 
-![CCNPreferencesWindowController Example Application](https://dl.dropbox.com/u/34133216/WebImages/Github/CCNPreferencesWindowController.mov)
+![CCNPreferencesWindowController Example Application](https://dl.dropbox.com/u/34133216/WebImages/Github/CCNPreferencesWindowController.gif)
 
 
 ## Integration
