@@ -63,3 +63,9 @@ The complete documentation you will find on [CocoaDocs](http://cocoadocs.org/doc
 
 ## License
 This software is published under the [MIT License](http://cocoanaut.mit-license.org).
+
+
+## Software that uses CCNPreferencesWindowController
+
+* [Review Times](http://reviewtimes.cocoanaut.com) - A small Mac tool that shows you the calculated average of the review times for both the Mac App Store and the iOS App Store
+
