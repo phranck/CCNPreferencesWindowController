@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C99d" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="centerToolbarIcons" destination="ykc-Dy-tod" id="7Rp-nq-0pn"/>
                 <outlet property="showPreferencesButton" destination="ma7-SS-Krl" id="SeP-RW-GeM"/>
+                <outlet property="toolbarOrSegment" destination="uBj-Mh-7en" id="Yay-bL-L4e"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -706,6 +707,31 @@
                             <action selector="centerToolbarIconsAction:" target="Voe-Tx-rLC" id="o0M-Mz-a5L"/>
                         </connections>
                     </button>
+                    <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBj-Mh-7en">
+                        <rect key="frame" x="54" y="98" width="351" height="38"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="183" height="18"/>
+                        <size key="intercellSpacing" width="4" height="2"/>
+                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="L39-ZG-ioh">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="radio" title="Present Toolbar items" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="B2k-CK-ZHb">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" title="Present SegmentedControl" imagePosition="left" alignment="left" inset="2" id="86x-pr-f1E">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="toolbarOrSegmentAction:" target="Voe-Tx-rLC" id="p9U-t8-Hot"/>
+                        </connections>
+                    </matrix>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="ma7-SS-Krl" secondAttribute="bottom" constant="20" id="6dk-G3-Fl6"/>
