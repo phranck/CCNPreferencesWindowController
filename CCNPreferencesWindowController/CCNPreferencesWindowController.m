@@ -186,6 +186,12 @@ static unsigned short const CCNEscapeKey = 53;
 
 #pragma mark - Custom Accessors
 
+- (void)setKeepWindowAlwaysOnTop:(BOOL)keepWindowAlwaysOnTop {
+    if (_keepWindowAlwaysOnTop != keepWindowAlwaysOnTop) {
+        [self.window setLevel:NSStatusWindowLevel];
+    }
+}
+
 - (void)setTitlebarAppearsTransparent:(BOOL)titlebarAppearsTransparent {
     self.window.titlebarAppearsTransparent = titlebarAppearsTransparent;
 }
