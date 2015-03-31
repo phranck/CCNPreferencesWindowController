@@ -29,7 +29,6 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "CCNPreferencesWindowController.h"
-#import "CCNPreferencesWindowControllerProtocol.h"
 
 
 static NSString *const CCNPreferencesToolbarIdentifier                 = @"CCNPreferencesMainToolbar";
