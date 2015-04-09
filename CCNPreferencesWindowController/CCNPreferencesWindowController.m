@@ -58,7 +58,6 @@ static unsigned short const CCNEscapeKey = 53;
 #pragma mark -
 
 @interface CCNPreferencesWindowController() <NSToolbarDelegate, NSWindowDelegate>
-@property (strong) CCNPreferencesWindow *window;
 
 @property (strong) NSToolbar *toolbar;
 @property (strong) NSSegmentedControl *segmentedControl;
