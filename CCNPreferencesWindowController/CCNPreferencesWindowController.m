@@ -29,7 +29,6 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "CCNPreferencesWindowController.h"
-#import "CCNPreferencesWindowControllerProtocol.h"
 
 
 static NSString *const CCNPreferencesToolbarIdentifier                 = @"CCNPreferencesMainToolbar";
@@ -59,7 +58,6 @@ static unsigned short const CCNEscapeKey = 53;
 #pragma mark -
 
 @interface CCNPreferencesWindowController() <NSToolbarDelegate, NSWindowDelegate>
-@property (strong) CCNPreferencesWindow *window;
 
 @property (strong) NSToolbar *toolbar;
 @property (strong) NSSegmentedControl *segmentedControl;
@@ -220,7 +218,7 @@ static unsigned short const CCNEscapeKey = 53;
     for (NSViewController *vc in self.viewControllers) {
         NSString *title = [vc performSelector:@selector(preferenceTitle)];
         NSSize titleSize = [title sizeWithAttributes:@{ NSFontAttributeName: [NSFont systemFontOfSize:[NSFont systemFontSizeForControlSize:NSRegularControlSize]] }];
-        if (titleSize.width > maxSize.width) {
+        if (titleSize.width + CCNPreferencesToolbarSegmentedControlItemInset.width > maxSize.width) {
             maxSize = NSMakeSize(ceilf(titleSize.width) + CCNPreferencesToolbarSegmentedControlItemInset.width, ceilf(titleSize.height) + CCNPreferencesToolbarSegmentedControlItemInset.height);
         }
     }
