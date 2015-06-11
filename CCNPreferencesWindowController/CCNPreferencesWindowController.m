@@ -91,6 +91,7 @@ static unsigned short const CCNEscapeKey = 53;
     self.centerToolbarItems = YES;
     self.showToolbarSeparator = YES;
     self.allowsVibrancy = NO;
+    self.titleVisibility = YES;
 }
 
 - (void)setupToolbar {
@@ -192,6 +193,12 @@ static unsigned short const CCNEscapeKey = 53;
 
 - (void)setTitlebarAppearsTransparent:(BOOL)titlebarAppearsTransparent {
     self.window.titlebarAppearsTransparent = titlebarAppearsTransparent;
+}
+
+- (void)setTitleVisibility:(BOOL)titleVisibility {
+    if (_titleVisibility == titleVisibility) {
+        self.window.titleVisibility = NSWindowTitleHidden;
+    }
 }
 
 - (void)setCenterToolbarItems:(BOOL)centerToolbarItems {
