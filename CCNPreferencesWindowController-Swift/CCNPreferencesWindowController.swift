@@ -1,7 +1,7 @@
 //
 //  CCNPreferencesWindowController.swift
 //
-//  Original Objective-C code created by Frank Gregor on 16/01/15, adapted to Swift by Bruno Vandekerkhove on 30/08/15.
+//  Original Objective-C code created by Frank Gregor on 16/01/15, adapted by Bruno Vandekerkhove on 30/08/15.
 //  Copyright (c) 2015 cocoa:naut. All rights reserved.
 //
 
@@ -64,11 +64,15 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     
     // MARK: - Constructors
 
+    @IBOutlet weak var headerView: ColoredView!
+    
     /// Initialize a new preferences window controller.
     init() {
         
-        super.init(window: CCNPreferencesWindow())
-                
+        super.init(window: nil)
+        
+        NSBundle.mainBundle().loadNibNamed("PreferencesWindow", owner: self, topLevelObjects: nil)
+
     }
     
     /// Initializes a new preferences window controller with the given coder
@@ -76,6 +80,48 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         
         super.init(coder: coder)
         
+    }
+    
+    // MARK: - Window Delegate
+    
+    func windowDidBecomeMain(notification: NSNotification) {
+        
+        active = true
+        
+    }
+    
+    func windowDidResignMain(notification: NSNotification) {
+        
+        active = false
+        
+    }
+    
+    // MARK: - Interface Builder
+    
+    override func awakeFromNib() {
+        
+        headerView.color = NSColor(red: 0.18, green: 0.58, blue: 0.74, alpha: 1.0)
+        
+        window?.center()
+        window?.movableByWindowBackground = true
+        
+    }
+    
+    var active = true {
+        didSet {
+            
+            if self.active {
+                
+                headerView.color = NSColor(red: 0.18, green: 0.58, blue: 0.74, alpha: 1.0)
+                
+            }
+            else {
+                
+                headerView.color = NSColor(calibratedWhite: 0.9, alpha: 1.0)
+                
+            }
+            
+        }
     }
     
     ////////////////////////////////////////////////////////////////////////////////
@@ -250,7 +296,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         segmentedControl?.action = Selector("segmentedControlAction:")
         segmentedControl?.identifier = CCNPreferencesToolbarSegmentedControlIdentifier
         
-        if let cell = segmentedControl?.cell() as? NSSegmentedCell {
+        if let cell = segmentedControl?.cell as? NSSegmentedCell {
             cell.controlSize = .RegularControlSize
             cell.trackingMode = .SelectOne
         }
@@ -258,18 +304,18 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         let segmentSize = maxSegmentSizeForCurrentViewControllers()
         
         let vcCount = CGFloat(viewControllers.count)
-        let segmentedControlWidth = segmentSize.width * vcCount + vcCount + 1.0
-        let segmentedControlHeight = segmentSize.height
-        segmentedControl?.frame = NSMakeRect(0, 0, segmentedControlWidth, segmentedControlHeight)
+        let segmentWidth = segmentSize.width * vcCount + vcCount + 1.0
+        let segmentHeight = segmentSize.height
+        segmentedControl?.frame = NSMakeRect(0, 0, segmentWidth, segmentHeight)
         
         var i = 0
         for viewController in viewControllers {
             
             segmentedControl?.setLabel(viewController.preferencesTitle(), forSegment: i)
             segmentedControl?.setWidth(segmentSize.width, forSegment: i)
-            segmentedControl?.cell()?.setTag(i, forSegment: i)
-            
-            i++
+            if let cell = segmentedControl?.cell as? NSSegmentedCell {
+                cell.setTag(i, forSegment: i++)
+            }
             
         }
         
@@ -300,7 +346,9 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         
         if let preferencesViewController = viewController as? NSViewController {
             
-            let viewControllerFrame = preferencesViewController.view.frame
+            var viewControllerFrame = preferencesViewController.view.frame
+            let headerViewHeight = headerView.frame.size.height
+            viewControllerFrame.size.height += headerViewHeight
             
             if  let currentWindowFrame = window?.frame,
                 let frameRectForContentRect = window?.frameRectForContentRect(viewControllerFrame) {
@@ -316,26 +364,38 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
                         window?.title = viewController.preferencesTitle() as String
                     }
                     
-                    let newContentView = preferencesViewController.view
-                    newContentView.alphaValue = 0.0
-                    newContentView.autoresizingMask = NSAutoresizingMaskOptions.allZeros
+                    let newView = preferencesViewController.view
+                    newView.frame.origin = NSMakePoint(0, 0)
+                    newView.alphaValue = 0.0
+                    newView.autoresizingMask = NSAutoresizingMaskOptions()
+                    
+                    // headerView.frame.origin.y = newWindowFrame.size.height - headerViewHeight
+                    headerView.frame.size.width = newView.frame.size.width
+                    
+                    if let previousViewController = activeViewController as? NSViewController {
+                        previousViewController.view.removeFromSuperview()
+                    }
                     
                     if allowsVibrancy {
-                        let effectView = NSVisualEffectView(frame: newContentView.frame)
+                        let effectView = NSVisualEffectView(frame: newView.frame)
                         effectView.blendingMode = .BehindWindow
-                        effectView.addSubview(newContentView)
-                        window?.contentView = effectView
+                        effectView.addSubview(newView)
+                        window?.contentView!.addSubview(effectView)
                     }
                     else {
-                        window?.contentView = newContentView
+                        window?.contentView!.addSubview(newView)
+                    }
+                    
+                    if let firstResponder = viewController.firstResponder?() {
+                        window?.makeFirstResponder(firstResponder)
                     }
                     
                     NSAnimationContext.runAnimationGroup({
-                        (context: NSAnimationContext!) -> Void in
+                        (context: NSAnimationContext) -> Void in
                         context.duration = (animate ? 0.25 : 0.0)
                         context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
                         self.window?.animator().setFrame(newWindowFrame, display: true)
-                        newContentView.animator().alphaValue = 1.0
+                        newView.animator().alphaValue = 1.0
                         }) {
                             () -> Void in
                             self.activeViewController = viewController
@@ -364,16 +424,12 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     func toolbar(toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: String, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
         
         if itemIdentifier == NSToolbarFlexibleSpaceItemIdentifier {
-            
             return nil
-            
         }
         else if itemIdentifier == CCNPreferencesToolbarSegmentedControlIdentifier {
             
-            var toolbarItem = NSToolbarItem(itemIdentifier: itemIdentifier)
+            let toolbarItem = NSToolbarItem(itemIdentifier: itemIdentifier)
             toolbarItem.view = segmentedControl
-            toolbarItem.minSize = segmentedControl!.frame.size
-            toolbarItem.maxSize = segmentedControl!.frame.size
             
             return toolbarItem
             
@@ -386,7 +442,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
                 let label = viewController.preferencesTitle()
                 let icon = viewController.preferencesIcon()
                 
-                var toolbarItem = NSToolbarItem(itemIdentifier: identifier as String)
+                let toolbarItem = NSToolbarItem(itemIdentifier: identifier as String)
                 toolbarItem.label = label
                 toolbarItem.paletteLabel = label
                 toolbarItem.image = icon
@@ -406,7 +462,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         
     }
     
-    func toolbarDefaultItemIdentifiers(toolbar: NSToolbar) -> [AnyObject] {
+    func toolbarDefaultItemIdentifiers(toolbar: NSToolbar) -> [String] {
         
         if toolbarDefaultItemIdentifiers == nil && viewControllers.count > 0 {
             
@@ -425,12 +481,8 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
                     toolbarDefaultItemIdentifiers?.append(NSToolbarFlexibleSpaceItemIdentifier)
                 }
                 
-                let offset = toolbarDefaultItemIdentifiers!.count
-                
                 for viewController in viewControllers {
-                    
                     toolbarDefaultItemIdentifiers?.append(viewController.preferencesIdentifier())
-                    
                 }
                 
                 if centerToolbarItems {
@@ -445,13 +497,13 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         
     }
     
-    func toolbarAllowedItemIdentifiers(toolbar: NSToolbar) -> [AnyObject] {
+    func toolbarAllowedItemIdentifiers(toolbar: NSToolbar) -> [String] {
         
         return toolbarDefaultItemIdentifiers(toolbar)
         
     }
     
-    func toolbarSelectableItemIdentifiers(toolbar: NSToolbar) -> [AnyObject] {
+    func toolbarSelectableItemIdentifiers(toolbar: NSToolbar) -> [String] {
         
         return toolbarDefaultItemIdentifiers(toolbar)
         
@@ -469,7 +521,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     
     func segmentedControlAction(control: NSSegmentedControl) {
         
-        if  let cell = control.cell() as? NSSegmentedCell {
+        if  let cell = control.cell as? NSSegmentedCell {
             
             let viewController = viewControllers[cell.tagForSegment(control.selectedSegment)]
             
@@ -490,12 +542,19 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
 ///
 class CCNPreferencesWindow : NSWindow {
     
+    
     ///
     ///  Initialize a new preferences window.
     ///
-    init() {
+    ///  - parameters:
+    ///     - contentRect: The new window's content rect.
+    ///     - styleMask: The new window's style mask.
+    ///     - backing: The buffer type.
+    ///     - defer
+    ///
+    override init(contentRect: NSRect, styleMask aStyle: Int, backing bufferingType: NSBackingStoreType, `defer` flag: Bool) {
         
-        super.init(contentRect: CCNPreferencesDefaultWindowRect, styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSUnifiedTitleAndToolbarWindowMask, backing: .Buffered, defer: true)
+        super.init(contentRect: CCNPreferencesDefaultWindowRect, styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSUnifiedTitleAndToolbarWindowMask, backing: .Buffered, `defer`: true)
         
         center()
         
