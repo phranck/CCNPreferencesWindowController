@@ -41,7 +41,7 @@ let escapeKey = 53
 // MARK: - Preferences Window Controller
 
 //
-//  A protocol adopted by classes that handle icon family data.
+//  A window controller that automatically manages custom view controllers for handling app preferences.
 //
 class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NSWindowDelegate {
     
