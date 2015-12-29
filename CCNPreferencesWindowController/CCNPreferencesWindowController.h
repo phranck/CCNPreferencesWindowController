@@ -37,6 +37,27 @@
 /** @name Preferences Window Behaviour */
 
 /**
+ Boolean property that defines the window level.
+
+ If set to `YES`, the window is on top of all other windows even when you change focus to another app.<br />
+ If set to `NO`, the window will only stay on top until you bring another window to front.
+
+ The default is `NO`.
+*/
+@property (assign, nonatomic) BOOL keepWindowAlwaysOnTop;
+
+/**
+ Boolean property that defines whether the title is shown or not.
+ 
+ If set to `YES`, the title is shown and with it the title bar.<br />
+ If set to `NO`, title and title bar is hidden.
+ 
+ The default is `YES`.
+ */
+
+@property (assign, nonatomic) BOOL titleVisibility;
+
+/**
  This is a forwarder for the used window.
 
  When `YES`, the titlebar doesn't draw its background, allowing all buttons to show through, and "click through" to happen. In general, this is only useful when `NSFullSizeContentViewWindowMask` is set.
