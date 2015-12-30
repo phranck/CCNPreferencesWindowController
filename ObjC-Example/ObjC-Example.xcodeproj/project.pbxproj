@@ -21,25 +21,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FD8F55541A6D0482002A9335 /* CCNPreferencesWindowController Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCNPreferencesWindowController Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD8F55581A6D0482002A9335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD8F55591A6D0482002A9335 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FD8F555A1A6D0482002A9335 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FD8F555C1A6D0482002A9335 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FD8F555E1A6D0482002A9335 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FD8F55541A6D0482002A9335 /* ObjC-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ObjC-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD8F55581A6D0482002A9335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../ObjC-Example/Info.plist"; sourceTree = "<group>"; };
+		FD8F55591A6D0482002A9335 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "../ObjC-Example/AppDelegate.h"; sourceTree = "<group>"; };
+		FD8F555A1A6D0482002A9335 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "../ObjC-Example/AppDelegate.m"; sourceTree = "<group>"; };
+		FD8F555C1A6D0482002A9335 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "../ObjC-Example/main.m"; sourceTree = "<group>"; };
+		FD8F555E1A6D0482002A9335 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../ObjC-Example/Images.xcassets"; sourceTree = "<group>"; };
 		FD8F55611A6D0482002A9335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FD8F55781A6D048F002A9335 /* CCNPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowController.h; sourceTree = "<group>"; };
 		FD8F55791A6D048F002A9335 /* CCNPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesWindowController.m; sourceTree = "<group>"; };
 		FD8F557A1A6D048F002A9335 /* CCNPreferencesWindowControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowControllerProtocol.h; sourceTree = "<group>"; };
-		FD8F557C1A6D069E002A9335 /* PreferencesGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesGeneralViewController.h; path = ViewController/PreferencesGeneralViewController.h; sourceTree = "<group>"; };
-		FD8F557D1A6D069E002A9335 /* PreferencesGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesGeneralViewController.m; path = ViewController/PreferencesGeneralViewController.m; sourceTree = "<group>"; };
-		FD8F557E1A6D069E002A9335 /* PreferencesGeneralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesGeneralViewController.xib; path = ViewController/PreferencesGeneralViewController.xib; sourceTree = "<group>"; };
-		FD8F55821A6D078C002A9335 /* PreferencesNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesNetworkViewController.h; path = ViewController/PreferencesNetworkViewController.h; sourceTree = "<group>"; };
-		FD8F55831A6D078C002A9335 /* PreferencesNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesNetworkViewController.m; path = ViewController/PreferencesNetworkViewController.m; sourceTree = "<group>"; };
-		FD8F55841A6D078C002A9335 /* PreferencesNetworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesNetworkViewController.xib; path = ViewController/PreferencesNetworkViewController.xib; sourceTree = "<group>"; };
-		FD8F55871A6D0886002A9335 /* PreferencesBonjourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesBonjourViewController.h; path = ViewController/PreferencesBonjourViewController.h; sourceTree = "<group>"; };
-		FD8F55881A6D0886002A9335 /* PreferencesBonjourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesBonjourViewController.m; path = ViewController/PreferencesBonjourViewController.m; sourceTree = "<group>"; };
-		FD8F55891A6D0886002A9335 /* PreferencesBonjourViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesBonjourViewController.xib; path = ViewController/PreferencesBonjourViewController.xib; sourceTree = "<group>"; };
+		FD8F557C1A6D069E002A9335 /* PreferencesGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesGeneralViewController.h; path = "../ObjC-Example/ViewController/PreferencesGeneralViewController.h"; sourceTree = "<group>"; };
+		FD8F557D1A6D069E002A9335 /* PreferencesGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesGeneralViewController.m; path = "../ObjC-Example/ViewController/PreferencesGeneralViewController.m"; sourceTree = "<group>"; };
+		FD8F557E1A6D069E002A9335 /* PreferencesGeneralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesGeneralViewController.xib; path = "../ObjC-Example/ViewController/PreferencesGeneralViewController.xib"; sourceTree = "<group>"; };
+		FD8F55821A6D078C002A9335 /* PreferencesNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesNetworkViewController.h; path = "../ObjC-Example/ViewController/PreferencesNetworkViewController.h"; sourceTree = "<group>"; };
+		FD8F55831A6D078C002A9335 /* PreferencesNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesNetworkViewController.m; path = "../ObjC-Example/ViewController/PreferencesNetworkViewController.m"; sourceTree = "<group>"; };
+		FD8F55841A6D078C002A9335 /* PreferencesNetworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesNetworkViewController.xib; path = "../ObjC-Example/ViewController/PreferencesNetworkViewController.xib"; sourceTree = "<group>"; };
+		FD8F55871A6D0886002A9335 /* PreferencesBonjourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesBonjourViewController.h; path = "../ObjC-Example/ViewController/PreferencesBonjourViewController.h"; sourceTree = "<group>"; };
+		FD8F55881A6D0886002A9335 /* PreferencesBonjourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesBonjourViewController.m; path = "../ObjC-Example/ViewController/PreferencesBonjourViewController.m"; sourceTree = "<group>"; };
+		FD8F55891A6D0886002A9335 /* PreferencesBonjourViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesBonjourViewController.xib; path = "../ObjC-Example/ViewController/PreferencesBonjourViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		FD8F554B1A6D0482002A9335 = {
 			isa = PBXGroup;
 			children = (
-				FD8F55561A6D0482002A9335 /* CCNPreferencesWindowController Example */,
+				FD8F55561A6D0482002A9335 /* ObjC-Example */,
 				FD8F55551A6D0482002A9335 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,12 +64,12 @@
 		FD8F55551A6D0482002A9335 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FD8F55541A6D0482002A9335 /* CCNPreferencesWindowController Example.app */,
+				FD8F55541A6D0482002A9335 /* ObjC-Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FD8F55561A6D0482002A9335 /* CCNPreferencesWindowController Example */ = {
+		FD8F55561A6D0482002A9335 /* ObjC-Example */ = {
 			isa = PBXGroup;
 			children = (
 				FD8F55591A6D0482002A9335 /* AppDelegate.h */,
@@ -80,6 +80,7 @@
 				FD8F55771A6D048F002A9335 /* CCNPreferencesWindowController */,
 				FD8F55571A6D0482002A9335 /* Supporting Files */,
 			);
+			name = "ObjC-Example";
 			path = "CCNPreferencesWindowController Example";
 			sourceTree = "<group>";
 		};
@@ -122,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FD8F55531A6D0482002A9335 /* CCNPreferencesWindowController Example */ = {
+		FD8F55531A6D0482002A9335 /* ObjC-Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD8F55711A6D0482002A9335 /* Build configuration list for PBXNativeTarget "CCNPreferencesWindowController Example" */;
+			buildConfigurationList = FD8F55711A6D0482002A9335 /* Build configuration list for PBXNativeTarget "ObjC-Example" */;
 			buildPhases = (
 				FD8F55501A6D0482002A9335 /* Sources */,
 				FD8F55511A6D0482002A9335 /* Frameworks */,
@@ -134,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = "CCNPreferencesWindowController Example";
+			name = "ObjC-Example";
 			productName = "CCNPreferencesWindowController Example";
-			productReference = FD8F55541A6D0482002A9335 /* CCNPreferencesWindowController Example.app */;
+			productReference = FD8F55541A6D0482002A9335 /* ObjC-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,7 +146,7 @@
 		FD8F554C1A6D0482002A9335 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "cocoa:naut";
 				TargetAttributes = {
 					FD8F55531A6D0482002A9335 = {
@@ -153,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FD8F554F1A6D0482002A9335 /* Build configuration list for PBXProject "CCNPreferencesWindowController Example" */;
+			buildConfigurationList = FD8F554F1A6D0482002A9335 /* Build configuration list for PBXProject "ObjC-Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -166,7 +167,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FD8F55531A6D0482002A9335 /* CCNPreferencesWindowController Example */,
+				FD8F55531A6D0482002A9335 /* ObjC-Example */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +210,7 @@
 				FD8F55611A6D0482002A9335 /* Base */,
 			);
 			name = MainMenu.xib;
+			path = "../ObjC-Example";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -234,6 +236,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -295,9 +298,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "CCNPreferencesWindowController Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ObjC-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ObjC-Example";
 			};
 			name = Debug;
 		};
@@ -306,16 +309,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "CCNPreferencesWindowController Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ObjC-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ObjC-Example";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD8F554F1A6D0482002A9335 /* Build configuration list for PBXProject "CCNPreferencesWindowController Example" */ = {
+		FD8F554F1A6D0482002A9335 /* Build configuration list for PBXProject "ObjC-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD8F556F1A6D0482002A9335 /* Debug */,
@@ -324,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD8F55711A6D0482002A9335 /* Build configuration list for PBXNativeTarget "CCNPreferencesWindowController Example" */ = {
+		FD8F55711A6D0482002A9335 /* Build configuration list for PBXNativeTarget "ObjC-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD8F55721A6D0482002A9335 /* Debug */,
