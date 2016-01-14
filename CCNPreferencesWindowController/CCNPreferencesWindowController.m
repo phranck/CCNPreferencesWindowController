@@ -276,7 +276,9 @@ static unsigned short const CCNEscapeKey = 53;
         self.window.contentView = effectView;
     }
     else {
-        self.window.contentView = newContentView;
+        NSView *view = [[NSView alloc] initWithFrame:newContentView.frame];
+        [view addSubview:newContentView];
+        self.window.contentView = view;
     }
 
     __weak typeof(self) wSelf = self;
