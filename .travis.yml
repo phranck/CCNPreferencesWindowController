@@ -1,3 +1,0 @@
-language: objective-c
-xcode_project: 'CCNPreferencesWindowController Example/CCNPreferencesWindowController Example.xcodeproj'
-xcode_scheme: 'CCNPreferencesWindowController Example'
