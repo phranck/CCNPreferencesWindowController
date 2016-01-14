@@ -1,5 +1,4 @@
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=phranck&url=https://github.com/phranck/CCNPreferencesWindowController&title=CCNPreferencesWindowController&tags=github&category=software)
-![Travis Status](https://travis-ci.org/phranck/CCNPreferencesWindowController.png?branch=master)
 
 
 
