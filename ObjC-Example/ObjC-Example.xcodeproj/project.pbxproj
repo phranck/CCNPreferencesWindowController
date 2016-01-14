@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FD8F555B1A6D0482002A9335 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8F555A1A6D0482002A9335 /* AppDelegate.m */; };
 		FD8F555D1A6D0482002A9335 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8F555C1A6D0482002A9335 /* main.m */; };
 		FD8F555F1A6D0482002A9335 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8F555E1A6D0482002A9335 /* Images.xcassets */; };
 		FD8F55621A6D0482002A9335 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD8F55601A6D0482002A9335 /* MainMenu.xib */; };
@@ -18,13 +17,12 @@
 		FD8F55861A6D078C002A9335 /* PreferencesNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD8F55841A6D078C002A9335 /* PreferencesNetworkViewController.xib */; };
 		FD8F558A1A6D0886002A9335 /* PreferencesBonjourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8F55881A6D0886002A9335 /* PreferencesBonjourViewController.m */; };
 		FD8F558B1A6D0886002A9335 /* PreferencesBonjourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD8F55891A6D0886002A9335 /* PreferencesBonjourViewController.xib */; };
+		FDA6BBE21C47C38300F5961B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA6BBE11C47C38300F5961B /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD8F55541A6D0482002A9335 /* ObjC-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ObjC-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8F55581A6D0482002A9335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../ObjC-Example/Info.plist"; sourceTree = "<group>"; };
-		FD8F55591A6D0482002A9335 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "../ObjC-Example/AppDelegate.h"; sourceTree = "<group>"; };
-		FD8F555A1A6D0482002A9335 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "../ObjC-Example/AppDelegate.m"; sourceTree = "<group>"; };
 		FD8F555C1A6D0482002A9335 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "../ObjC-Example/main.m"; sourceTree = "<group>"; };
 		FD8F555E1A6D0482002A9335 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../ObjC-Example/Images.xcassets"; sourceTree = "<group>"; };
 		FD8F55611A6D0482002A9335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -40,6 +38,8 @@
 		FD8F55871A6D0886002A9335 /* PreferencesBonjourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesBonjourViewController.h; path = "../ObjC-Example/ViewController/PreferencesBonjourViewController.h"; sourceTree = "<group>"; };
 		FD8F55881A6D0886002A9335 /* PreferencesBonjourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesBonjourViewController.m; path = "../ObjC-Example/ViewController/PreferencesBonjourViewController.m"; sourceTree = "<group>"; };
 		FD8F55891A6D0886002A9335 /* PreferencesBonjourViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesBonjourViewController.xib; path = "../ObjC-Example/ViewController/PreferencesBonjourViewController.xib"; sourceTree = "<group>"; };
+		FDA6BBE01C47C38300F5961B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FDA6BBE11C47C38300F5961B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,16 +72,15 @@
 		FD8F55561A6D0482002A9335 /* ObjC-Example */ = {
 			isa = PBXGroup;
 			children = (
-				FD8F55591A6D0482002A9335 /* AppDelegate.h */,
-				FD8F555A1A6D0482002A9335 /* AppDelegate.m */,
+				FDA6BBE01C47C38300F5961B /* AppDelegate.h */,
+				FDA6BBE11C47C38300F5961B /* AppDelegate.m */,
 				FD8F55601A6D0482002A9335 /* MainMenu.xib */,
 				FD8F55811A6D06B7002A9335 /* ViewController */,
 				FD8F555E1A6D0482002A9335 /* Images.xcassets */,
 				FD8F55771A6D048F002A9335 /* CCNPreferencesWindowController */,
 				FD8F55571A6D0482002A9335 /* Supporting Files */,
 			);
-			name = "ObjC-Example";
-			path = "CCNPreferencesWindowController Example";
+			path = "ObjC-Example";
 			sourceTree = "<group>";
 		};
 		FD8F55571A6D0482002A9335 /* Supporting Files */ = {
@@ -194,7 +193,7 @@
 			files = (
 				FD8F555D1A6D0482002A9335 /* main.m in Sources */,
 				FD8F557F1A6D069E002A9335 /* PreferencesGeneralViewController.m in Sources */,
-				FD8F555B1A6D0482002A9335 /* AppDelegate.m in Sources */,
+				FDA6BBE21C47C38300F5961B /* AppDelegate.m in Sources */,
 				FD8F557B1A6D048F002A9335 /* CCNPreferencesWindowController.m in Sources */,
 				FD8F558A1A6D0886002A9335 /* PreferencesBonjourViewController.m in Sources */,
 				FD8F55851A6D078C002A9335 /* PreferencesNetworkViewController.m in Sources */,
