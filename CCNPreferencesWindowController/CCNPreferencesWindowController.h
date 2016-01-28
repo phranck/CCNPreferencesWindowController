@@ -100,6 +100,13 @@
  The default is `YES`.
  */
 @property (assign, nonatomic) BOOL centerToolbarItems;
+/**
+ *  Boolean property that indicates whether the toolbar should be customizable.
+ *  This property is ignored if `showToolbarItemsAsSegmentedControl` set to `YES`.
+ *  The default is `NO`.
+ 
+ */
+@property (assign, nonatomic) BOOL shouldAllowToolBarCustomization;
 
 /**
  Boolean property that defines the contentView presentation.

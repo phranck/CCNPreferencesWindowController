@@ -92,6 +92,7 @@ static unsigned short const CCNEscapeKey = 53;
     self.showToolbarSeparator = YES;
     self.allowsVibrancy = NO;
     self.titleVisibility = YES;
+    self.shouldAllowToolBarCustomization = NO;
 }
 
 - (void)setupToolbar {
@@ -111,7 +112,7 @@ static unsigned short const CCNEscapeKey = 53;
             [self setupSegmentedControl];
         }
         else {
-            self.toolbar.allowsUserCustomization = YES;
+            self.toolbar.allowsUserCustomization = self.shouldAllowToolBarCustomization;
             self.toolbar.autosavesConfiguration = YES;
         }
 
