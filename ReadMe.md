@@ -1,5 +1,5 @@
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=phranck&url=https://github.com/phranck/CCNPreferencesWindowController&title=CCNPreferencesWindowController&tags=github&category=software)
-
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 
 ## Overview
@@ -54,6 +54,11 @@ That's all.
 ## Contribution
 
 The code is provided as-is, and it is far off being complete or free of bugs. If you like this component feel free to support it. Make changes related to your needs, extend it or just use it in your own project. Pull-Requests and Feedbacks are very welcome. Just contact me at [phranck@cocoanaut.com](mailto:phranck@cocoanaut.com?Subject=[CCNPreferencesWindowController] Your component on Github) or send me a ping on Twitter [@TheCocoaNaut](http://twitter.com/TheCocoaNaut). 
+
+
+## ToDo
+
+* Fix the broken Swift support
 
 
 ## Documentation
