@@ -233,7 +233,7 @@ static unsigned short const CCNEscapeKey = 53;
 }
 
 - (void)addPreferencesViewController:(id<CCNPreferencesWindowControllerProtocol>)viewController {
-    NSAssert([viewController conformsToProtocol:@protocol(CCNPreferencesWindowControllerProtocol)], @"ERROR: The viewController [%@] must conform to protocol <CCNPreferencesWindowControllerDelegate>", [viewController class]);
+    NSAssert([viewController conformsToProtocol:@protocol(CCNPreferencesWindowControllerProtocol)], @"ERROR: The viewController [%@] must conform to protocol <CCNPreferencesWindowControllerProtocol>", [viewController class]);
 
     [self.viewControllers addObject:viewController];
 }
