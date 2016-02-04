@@ -42,6 +42,8 @@ pod 'CCNPreferencesWindowController'
     [self.preferences showPreferencesWindow];
 }
 
+```
+
 ```Swift
 private let generalController = GeneralPreferencesController()
 private let advancedController = AdvancedPreferencesController()
