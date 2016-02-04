@@ -22,6 +22,7 @@ pod 'CCNPreferencesWindowController'
 
 ## Usage
 
+For the Objective-C version :
 
 ```Objective-C
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
