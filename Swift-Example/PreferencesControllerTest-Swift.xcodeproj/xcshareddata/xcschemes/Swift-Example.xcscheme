@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD8F55531A6D0482002A9335"
-               BuildableName = "ObjC-Example.app"
-               BlueprintName = "ObjC-Example"
-               ReferencedContainer = "container:ObjC-Example.xcodeproj">
+               BlueprintIdentifier = "DFBDEA671C63CD6200FA47BF"
+               BuildableName = "PreferencesControllerTest.app"
+               BlueprintName = "PreferencesControllerTest"
+               ReferencedContainer = "container:PreferencesControllerTest-Swift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD8F55531A6D0482002A9335"
-            BuildableName = "ObjC-Example.app"
-            BlueprintName = "ObjC-Example"
-            ReferencedContainer = "container:ObjC-Example.xcodeproj">
+            BlueprintIdentifier = "DFBDEA671C63CD6200FA47BF"
+            BuildableName = "PreferencesControllerTest.app"
+            BlueprintName = "PreferencesControllerTest"
+            ReferencedContainer = "container:PreferencesControllerTest-Swift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD8F55531A6D0482002A9335"
-            BuildableName = "ObjC-Example.app"
-            BlueprintName = "ObjC-Example"
-            ReferencedContainer = "container:ObjC-Example.xcodeproj">
+            BlueprintIdentifier = "DFBDEA671C63CD6200FA47BF"
+            BuildableName = "PreferencesControllerTest.app"
+            BlueprintName = "PreferencesControllerTest"
+            ReferencedContainer = "container:PreferencesControllerTest-Swift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FD8F55531A6D0482002A9335"
-            BuildableName = "ObjC-Example.app"
-            BlueprintName = "ObjC-Example"
-            ReferencedContainer = "container:ObjC-Example.xcodeproj">
+            BlueprintIdentifier = "DFBDEA671C63CD6200FA47BF"
+            BuildableName = "PreferencesControllerTest.app"
+            BlueprintName = "PreferencesControllerTest"
+            ReferencedContainer = "container:PreferencesControllerTest-Swift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

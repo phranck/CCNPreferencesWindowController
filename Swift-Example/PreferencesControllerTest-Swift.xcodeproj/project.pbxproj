@@ -125,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DFBDEA631C63CD6200FA47BF /* Build configuration list for PBXProject "PreferencesControllerTest" */;
+			buildConfigurationList = DFBDEA631C63CD6200FA47BF /* Build configuration list for PBXProject "PreferencesControllerTest-Swift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -269,7 +269,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PreferencesControllerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.brunovandekerkhove.PreferencesControllerTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cocoanaut.PreferencesControllerTest-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -280,7 +280,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PreferencesControllerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.brunovandekerkhove.PreferencesControllerTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cocoanaut.PreferencesControllerTest-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -288,7 +288,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DFBDEA631C63CD6200FA47BF /* Build configuration list for PBXProject "PreferencesControllerTest" */ = {
+		DFBDEA631C63CD6200FA47BF /* Build configuration list for PBXProject "PreferencesControllerTest-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFBDEA731C63CD6200FA47BF /* Debug */,

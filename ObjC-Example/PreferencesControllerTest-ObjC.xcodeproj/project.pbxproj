@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD3C5DD21CAAFD2700458AC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C5DC21CAAFD2700458AC9 /* AppDelegate.m */; };
+		FD3C5DD31CAAFD2700458AC9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3C5DC31CAAFD2700458AC9 /* MainMenu.xib */; };
+		FD3C5DD41CAAFD2700458AC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3C5DC51CAAFD2700458AC9 /* Images.xcassets */; };
+		FD3C5DD61CAAFD2700458AC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C5DC71CAAFD2700458AC9 /* main.m */; };
+		FD3C5DD71CAAFD2700458AC9 /* PreferencesBonjourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C5DCA1CAAFD2700458AC9 /* PreferencesBonjourViewController.m */; };
+		FD3C5DD81CAAFD2700458AC9 /* PreferencesBonjourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3C5DCB1CAAFD2700458AC9 /* PreferencesBonjourViewController.xib */; };
+		FD3C5DD91CAAFD2700458AC9 /* PreferencesGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C5DCD1CAAFD2700458AC9 /* PreferencesGeneralViewController.m */; };
+		FD3C5DDA1CAAFD2700458AC9 /* PreferencesGeneralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3C5DCE1CAAFD2700458AC9 /* PreferencesGeneralViewController.xib */; };
+		FD3C5DDB1CAAFD2700458AC9 /* PreferencesNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C5DD01CAAFD2700458AC9 /* PreferencesNetworkViewController.m */; };
+		FD3C5DDC1CAAFD2700458AC9 /* PreferencesNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3C5DD11CAAFD2700458AC9 /* PreferencesNetworkViewController.xib */; };
+		FD3C5DE31CAAFD5900458AC9 /* CCNPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C5DDF1CAAFD5900458AC9 /* CCNPreferencesWindowController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FD3C5DC11CAAFD2700458AC9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FD3C5DC21CAAFD2700458AC9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FD3C5DC41CAAFD2700458AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FD3C5DC51CAAFD2700458AC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FD3C5DC61CAAFD2700458AC9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3C5DC71CAAFD2700458AC9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD3C5DC91CAAFD2700458AC9 /* PreferencesBonjourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesBonjourViewController.h; sourceTree = "<group>"; };
+		FD3C5DCA1CAAFD2700458AC9 /* PreferencesBonjourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesBonjourViewController.m; sourceTree = "<group>"; };
+		FD3C5DCB1CAAFD2700458AC9 /* PreferencesBonjourViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesBonjourViewController.xib; sourceTree = "<group>"; };
+		FD3C5DCC1CAAFD2700458AC9 /* PreferencesGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesGeneralViewController.h; sourceTree = "<group>"; };
+		FD3C5DCD1CAAFD2700458AC9 /* PreferencesGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesGeneralViewController.m; sourceTree = "<group>"; };
+		FD3C5DCE1CAAFD2700458AC9 /* PreferencesGeneralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesGeneralViewController.xib; sourceTree = "<group>"; };
+		FD3C5DCF1CAAFD2700458AC9 /* PreferencesNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesNetworkViewController.h; sourceTree = "<group>"; };
+		FD3C5DD01CAAFD2700458AC9 /* PreferencesNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesNetworkViewController.m; sourceTree = "<group>"; };
+		FD3C5DD11CAAFD2700458AC9 /* PreferencesNetworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesNetworkViewController.xib; sourceTree = "<group>"; };
+		FD3C5DDE1CAAFD5900458AC9 /* CCNPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowController.h; sourceTree = "<group>"; };
+		FD3C5DDF1CAAFD5900458AC9 /* CCNPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesWindowController.m; sourceTree = "<group>"; };
+		FD4476BE1CAAFE7900AE283F /* CCNPreferencesWindowControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowControllerProtocol.h; sourceTree = "<group>"; };
+		FD8F55541A6D0482002A9335 /* PreferencesControllerTest-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PreferencesControllerTest-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD8F55511A6D0482002A9335 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD119CD81CAAFFA000BE9C00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD3C5DC51CAAFD2700458AC9 /* Images.xcassets */,
+				FD3C5DC61CAAFD2700458AC9 /* Info.plist */,
+				FD3C5DC71CAAFD2700458AC9 /* main.m */,
+				FD3C5DC31CAAFD2700458AC9 /* MainMenu.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD3C5DC01CAAFD2700458AC9 /* PreferencesControllerTest */ = {
+			isa = PBXGroup;
+			children = (
+				FD3C5DC11CAAFD2700458AC9 /* AppDelegate.h */,
+				FD3C5DC21CAAFD2700458AC9 /* AppDelegate.m */,
+				FD3C5DC81CAAFD2700458AC9 /* Panels */,
+				FD119CD81CAAFFA000BE9C00 /* Supporting Files */,
+				FD3C5DDD1CAAFD5900458AC9 /* CCNPreferencesWindowController */,
+			);
+			path = PreferencesControllerTest;
+			sourceTree = "<group>";
+		};
+		FD3C5DC81CAAFD2700458AC9 /* Panels */ = {
+			isa = PBXGroup;
+			children = (
+				FD3C5DC91CAAFD2700458AC9 /* PreferencesBonjourViewController.h */,
+				FD3C5DCA1CAAFD2700458AC9 /* PreferencesBonjourViewController.m */,
+				FD3C5DCB1CAAFD2700458AC9 /* PreferencesBonjourViewController.xib */,
+				FD3C5DCC1CAAFD2700458AC9 /* PreferencesGeneralViewController.h */,
+				FD3C5DCD1CAAFD2700458AC9 /* PreferencesGeneralViewController.m */,
+				FD3C5DCE1CAAFD2700458AC9 /* PreferencesGeneralViewController.xib */,
+				FD3C5DCF1CAAFD2700458AC9 /* PreferencesNetworkViewController.h */,
+				FD3C5DD01CAAFD2700458AC9 /* PreferencesNetworkViewController.m */,
+				FD3C5DD11CAAFD2700458AC9 /* PreferencesNetworkViewController.xib */,
+			);
+			name = Panels;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FD3C5DDD1CAAFD5900458AC9 /* CCNPreferencesWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				FD3C5DDE1CAAFD5900458AC9 /* CCNPreferencesWindowController.h */,
+				FD3C5DDF1CAAFD5900458AC9 /* CCNPreferencesWindowController.m */,
+				FD4476BE1CAAFE7900AE283F /* CCNPreferencesWindowControllerProtocol.h */,
+			);
+			name = CCNPreferencesWindowController;
+			path = ../../CCNPreferencesWindowController;
+			sourceTree = "<group>";
+		};
+		FD8F554B1A6D0482002A9335 = {
+			isa = PBXGroup;
+			children = (
+				FD3C5DC01CAAFD2700458AC9 /* PreferencesControllerTest */,
+				FD8F55551A6D0482002A9335 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD8F55551A6D0482002A9335 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD8F55541A6D0482002A9335 /* PreferencesControllerTest-ObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD8F55531A6D0482002A9335 /* PreferencesControllerTest-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD8F55711A6D0482002A9335 /* Build configuration list for PBXNativeTarget "PreferencesControllerTest-ObjC" */;
+			buildPhases = (
+				FD8F55501A6D0482002A9335 /* Sources */,
+				FD8F55511A6D0482002A9335 /* Frameworks */,
+				FD8F55521A6D0482002A9335 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PreferencesControllerTest-ObjC";
+			productName = "CCNPreferencesWindowController Example";
+			productReference = FD8F55541A6D0482002A9335 /* PreferencesControllerTest-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD8F554C1A6D0482002A9335 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "cocoa:naut";
+				TargetAttributes = {
+					FD8F55531A6D0482002A9335 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = FD8F554F1A6D0482002A9335 /* Build configuration list for PBXProject "PreferencesControllerTest-ObjC" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD8F554B1A6D0482002A9335;
+			productRefGroup = FD8F55551A6D0482002A9335 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD8F55531A6D0482002A9335 /* PreferencesControllerTest-ObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD8F55521A6D0482002A9335 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3C5DDC1CAAFD2700458AC9 /* PreferencesNetworkViewController.xib in Resources */,
+				FD3C5DD31CAAFD2700458AC9 /* MainMenu.xib in Resources */,
+				FD3C5DD81CAAFD2700458AC9 /* PreferencesBonjourViewController.xib in Resources */,
+				FD3C5DDA1CAAFD2700458AC9 /* PreferencesGeneralViewController.xib in Resources */,
+				FD3C5DD41CAAFD2700458AC9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD8F55501A6D0482002A9335 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3C5DDB1CAAFD2700458AC9 /* PreferencesNetworkViewController.m in Sources */,
+				FD3C5DD91CAAFD2700458AC9 /* PreferencesGeneralViewController.m in Sources */,
+				FD3C5DE31CAAFD5900458AC9 /* CCNPreferencesWindowController.m in Sources */,
+				FD3C5DD61CAAFD2700458AC9 /* main.m in Sources */,
+				FD3C5DD71CAAFD2700458AC9 /* PreferencesBonjourViewController.m in Sources */,
+				FD3C5DD21CAAFD2700458AC9 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FD3C5DC31CAAFD2700458AC9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD3C5DC41CAAFD2700458AC9 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD8F556F1A6D0482002A9335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FD8F55701A6D0482002A9335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FD8F55721A6D0482002A9335 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/PreferencesControllerTest/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cocoanaut.PreferencesControllerTest-ObjC";
+				PRODUCT_NAME = "PreferencesControllerTest-ObjC";
+			};
+			name = Debug;
+		};
+		FD8F55731A6D0482002A9335 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/PreferencesControllerTest/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cocoanaut.PreferencesControllerTest-ObjC";
+				PRODUCT_NAME = "PreferencesControllerTest-ObjC";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD8F554F1A6D0482002A9335 /* Build configuration list for PBXProject "PreferencesControllerTest-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD8F556F1A6D0482002A9335 /* Debug */,
+				FD8F55701A6D0482002A9335 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD8F55711A6D0482002A9335 /* Build configuration list for PBXNativeTarget "PreferencesControllerTest-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD8F55721A6D0482002A9335 /* Debug */,
+				FD8F55731A6D0482002A9335 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD8F554C1A6D0482002A9335 /* Project object */;
+}
