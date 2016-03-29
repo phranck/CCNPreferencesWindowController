@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		DFBDEA6C1C63CD6200FA47BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDEA6B1C63CD6200FA47BF /* AppDelegate.swift */; };
 		DFBDEA711C63CD6200FA47BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBDEA6F1C63CD6200FA47BF /* MainMenu.xib */; };
-		DFBDEA7B1C63CDC000FA47BF /* CCNPreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDEA791C63CDC000FA47BF /* CCNPreferencesWindowController.swift */; };
-		DFBDEA7C1C63CDC000FA47BF /* CCNPreferencesWindowControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDEA7A1C63CDC000FA47BF /* CCNPreferencesWindowControllerProtocol.swift */; };
 		DFBDEA811C63CEAB00FA47BF /* GeneralPreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDEA7D1C63CEAB00FA47BF /* GeneralPreferencesController.swift */; };
 		DFBDEA821C63CEAB00FA47BF /* GeneralPreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBDEA7E1C63CEAB00FA47BF /* GeneralPreferencesController.xib */; };
 		DFBDEA831C63CEAB00FA47BF /* AdvancedPreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBDEA7F1C63CEAB00FA47BF /* AdvancedPreferencesController.swift */; };
 		DFBDEA841C63CEAB00FA47BF /* AdvancedPreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBDEA801C63CEAB00FA47BF /* AdvancedPreferencesController.xib */; };
+		FDADE0DB1CAB02DF003394C5 /* CCNPreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADE0D71CAB02DF003394C5 /* CCNPreferencesWindowController.swift */; };
+		FDADE0DC1CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADE0D91CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +22,13 @@
 		DFBDEA6B1C63CD6200FA47BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFBDEA701C63CD6200FA47BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DFBDEA721C63CD6200FA47BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFBDEA791C63CDC000FA47BF /* CCNPreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNPreferencesWindowController.swift; sourceTree = "<group>"; };
-		DFBDEA7A1C63CDC000FA47BF /* CCNPreferencesWindowControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNPreferencesWindowControllerProtocol.swift; sourceTree = "<group>"; };
 		DFBDEA7D1C63CEAB00FA47BF /* GeneralPreferencesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeneralPreferencesController.swift; path = Panels/GeneralPreferencesController.swift; sourceTree = "<group>"; };
 		DFBDEA7E1C63CEAB00FA47BF /* GeneralPreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GeneralPreferencesController.xib; path = Panels/GeneralPreferencesController.xib; sourceTree = "<group>"; };
 		DFBDEA7F1C63CEAB00FA47BF /* AdvancedPreferencesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancedPreferencesController.swift; path = Panels/AdvancedPreferencesController.swift; sourceTree = "<group>"; };
 		DFBDEA801C63CEAB00FA47BF /* AdvancedPreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AdvancedPreferencesController.xib; path = Panels/AdvancedPreferencesController.xib; sourceTree = "<group>"; };
+		FDADE0D71CAB02DF003394C5 /* CCNPreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNPreferencesWindowController.swift; sourceTree = "<group>"; };
+		FDADE0D81CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowControllerProtocol.h; sourceTree = "<group>"; };
+		FDADE0D91CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCNPreferencesWindowControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				DFBDEA6A1C63CD6200FA47BF /* PreferencesControllerTest */,
+				FDADE0D41CAB02DF003394C5 /* CCNPreferencesWindowController */,
 				DFBDEA781C63CD6C00FA47BF /* Supporting Files */,
 				DFBDEA691C63CD6200FA47BF /* Products */,
 			);
@@ -62,8 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				DFBDEA6B1C63CD6200FA47BF /* AppDelegate.swift */,
-				DFBDEA7A1C63CDC000FA47BF /* CCNPreferencesWindowControllerProtocol.swift */,
-				DFBDEA791C63CDC000FA47BF /* CCNPreferencesWindowController.swift */,
 				DFBDEA851C63CEAE00FA47BF /* Panels */,
 			);
 			path = PreferencesControllerTest;
@@ -88,6 +88,17 @@
 				DFBDEA801C63CEAB00FA47BF /* AdvancedPreferencesController.xib */,
 			);
 			name = Panels;
+			sourceTree = "<group>";
+		};
+		FDADE0D41CAB02DF003394C5 /* CCNPreferencesWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				FDADE0D71CAB02DF003394C5 /* CCNPreferencesWindowController.swift */,
+				FDADE0D81CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.h */,
+				FDADE0D91CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.swift */,
+			);
+			name = CCNPreferencesWindowController;
+			path = ../CCNPreferencesWindowController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,10 +173,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFBDEA811C63CEAB00FA47BF /* GeneralPreferencesController.swift in Sources */,
-				DFBDEA7B1C63CDC000FA47BF /* CCNPreferencesWindowController.swift in Sources */,
 				DFBDEA831C63CEAB00FA47BF /* AdvancedPreferencesController.swift in Sources */,
-				DFBDEA7C1C63CDC000FA47BF /* CCNPreferencesWindowControllerProtocol.swift in Sources */,
+				FDADE0DC1CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.swift in Sources */,
 				DFBDEA6C1C63CD6200FA47BF /* AppDelegate.swift in Sources */,
+				FDADE0DB1CAB02DF003394C5 /* CCNPreferencesWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

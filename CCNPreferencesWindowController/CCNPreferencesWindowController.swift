@@ -70,7 +70,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         
         super.init(window: nil)
                 
-        window = CCNPreferencesWindow(contentRect: CCNPreferencesDefaultWindowRect, styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSUnifiedTitleAndToolbarWindowMask, backing: .Buffered, `defer`: true)
+        window = CCNPreferencesWindow(contentRect: CCNPreferencesDefaultWindowRect, styleMask: NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSUnifiedTitleAndToolbarWindowMask, backing: .Buffered, defer: true)
         
         window?.movableByWindowBackground = true
 
@@ -260,7 +260,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         segmentedControl?.segmentCount = viewControllers.count
         segmentedControl?.segmentStyle = .TexturedSquare
         segmentedControl?.target = self
-        segmentedControl?.action = Selector("segmentedControlAction:")
+        segmentedControl?.action = #selector(CCNPreferencesWindowController.segmentedControlAction(_:))
         segmentedControl?.identifier = CCNPreferencesToolbarSegmentedControlIdentifier
         
         if let cell = segmentedControl?.cell as? NSSegmentedCell {
@@ -281,7 +281,8 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
             segmentedControl?.setLabel(viewController.preferencesTitle(), forSegment: i)
             segmentedControl?.setWidth(segmentSize.width, forSegment: i)
             if let cell = segmentedControl?.cell as? NSSegmentedCell {
-                cell.setTag(i, forSegment: i++)
+                i += 1;
+                cell.setTag(i, forSegment: i)
             }
             
         }
@@ -412,7 +413,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
                     toolbarItem.toolTip = tooltip
                 }
                 toolbarItem.target = self
-                toolbarItem.action = Selector("toolbarItemAction:")
+                toolbarItem.action = #selector(CCNPreferencesWindowController.toolbarItemAction(_:))
                 
                 return toolbarItem
                 
@@ -516,7 +517,7 @@ class CCNPreferencesWindow : NSWindow {
     ///
     override init(contentRect: NSRect, styleMask aStyle: Int, backing bufferingType: NSBackingStoreType, `defer` flag: Bool) {
         
-        super.init(contentRect: contentRect, styleMask: aStyle, backing: bufferingType, `defer`: flag)
+        super.init(contentRect: contentRect, styleMask: aStyle, backing: bufferingType, defer:flag)
         
         setFrameAutosaveName(CCNPreferencesWindowFrameAutoSaveName)
         setFrameFromString(CCNPreferencesWindowFrameAutoSaveName)
