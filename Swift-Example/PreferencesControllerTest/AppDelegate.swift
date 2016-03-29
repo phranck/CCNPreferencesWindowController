@@ -20,9 +20,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
        
         // Set up preferences window
         preferencesController.viewControllers = [generalController, advancedController]
-        preferencesController.titleAppearsTransparent = true
+        preferencesController.titleAppearsTransparent = false
         preferencesController.showToolbarSeparator = false
-        preferencesController.showToolbarItemsAsSegmentedControl = true
+        preferencesController.showToolbarItemsAsSegmentedControl = false
         preferencesController.allowsVibrancy = false
         
         // Show preferences
