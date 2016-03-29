@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'CCNPreferencesWindowController'
-  s.version               = '1.4.0'
+  s.version               = '1.4.1'
   s.summary               = 'An Objective-C/Swift class for automated management of preference view controllers.'
   s.description           = 'CCNPreferencesWindowController is an Objective-C/Swift subclass of NSWindowController that automatically manages your custom view controllers for handling app preferences.'
   s.homepage              = 'https://github.com/phranck/CCNPreferencesWindowController'
