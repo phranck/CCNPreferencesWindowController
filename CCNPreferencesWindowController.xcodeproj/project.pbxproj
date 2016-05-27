@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5087BC621CF824C9009915EB /* CCNPreferencesWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5087BC611CF824C9009915EB /* CCNPreferencesWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5087BC6A1CF8252F009915EB /* CCNPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5087BC691CF8252F009915EB /* CCNPreferencesWindowController.m */; };
-		5087BC6C1CF826C7009915EB /* CCNPreferencesWindowControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5087BC6B1CF826C7009915EB /* CCNPreferencesWindowControllerProtocol.h */; };
+		5087BC6C1CF826C7009915EB /* CCNPreferencesWindowControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 5087BC6B1CF826C7009915EB /* CCNPreferencesWindowControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
