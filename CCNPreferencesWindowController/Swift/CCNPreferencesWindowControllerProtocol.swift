@@ -44,9 +44,9 @@ import AppKit
     func preferencesIcon() -> NSImage
     
     /// The preference panel's first responder
-    optional func firstResponder() -> NSResponder
+    @objc optional func firstResponder() -> NSResponder
     
     /// The tooltip of the preference panel
-    optional func preferencesToolTip() -> String
+    @objc optional func preferencesToolTip() -> String
     
 }
