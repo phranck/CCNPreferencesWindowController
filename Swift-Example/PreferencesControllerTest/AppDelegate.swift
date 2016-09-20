@@ -12,11 +12,11 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     // Window/View Controllers
-    private let generalController = GeneralPreferencesController()
-    private let advancedController = AdvancedPreferencesController()
-    private var preferencesController = CCNPreferencesWindowController()
+    fileprivate let generalController = GeneralPreferencesController()
+    fileprivate let advancedController = AdvancedPreferencesController()
+    fileprivate var preferencesController = CCNPreferencesWindowController()
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
        
         // Set up preferences window
         preferencesController.viewControllers = [generalController, advancedController]
@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
 
-    @IBAction func showPreferences(sender: AnyObject?) {
+    @IBAction func showPreferences(_ sender: AnyObject?) {
         
         preferencesController.showPreferencesWindow()
         
