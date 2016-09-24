@@ -210,10 +210,12 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
             }
             
         }
-        
-        if activeViewController == nil {
-            let viewController = selectedViewController ?? viewControllers[0]
-            toolbar?.selectedItemIdentifier = type(of: viewController).preferencesIdentifier
+
+        if let viewController = selectedViewController {
+            activateViewController(viewController, animate: false)
+            window?.center()
+        } else if activeViewController == nil {
+            let viewController = viewControllers[0]
             activateViewController(viewController, animate: false)
             window?.center()
         }
@@ -221,7 +223,8 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         window?.alphaValue = 1.0
         
     }
-    
+
+
     ///
     ///  Hide the preferences window.
     ///
@@ -327,6 +330,8 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         
         guard let preferencesViewController = viewController as? NSViewController,
             let window = self.window else { return }
+
+        toolbar?.selectedItemIdentifier = type(of: viewController).preferencesIdentifier
 
         let currentWindowFrame = window.frame
         let frameRectForContentRect = window.frameRect(forContentRect: preferencesViewController.view.frame)
