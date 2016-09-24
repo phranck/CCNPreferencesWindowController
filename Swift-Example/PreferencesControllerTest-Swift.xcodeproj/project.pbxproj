@@ -27,7 +27,6 @@
 		DFBDEA7F1C63CEAB00FA47BF /* AdvancedPreferencesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvancedPreferencesController.swift; path = Panels/AdvancedPreferencesController.swift; sourceTree = "<group>"; };
 		DFBDEA801C63CEAB00FA47BF /* AdvancedPreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AdvancedPreferencesController.xib; path = Panels/AdvancedPreferencesController.xib; sourceTree = "<group>"; };
 		FDADE0D71CAB02DF003394C5 /* CCNPreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCNPreferencesWindowController.swift; path = Swift/CCNPreferencesWindowController.swift; sourceTree = "<group>"; };
-		FDADE0D81CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNPreferencesWindowControllerProtocol.h; path = ObjC/CCNPreferencesWindowControllerProtocol.h; sourceTree = "<group>"; };
 		FDADE0D91CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCNPreferencesWindowControllerProtocol.swift; path = Swift/CCNPreferencesWindowControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				FDADE0D71CAB02DF003394C5 /* CCNPreferencesWindowController.swift */,
-				FDADE0D81CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.h */,
 				FDADE0D91CAB02DF003394C5 /* CCNPreferencesWindowControllerProtocol.swift */,
 			);
 			name = CCNPreferencesWindowController;
