@@ -279,7 +279,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         var i = 0
         for viewController in viewControllers {
             
-            segmentedControl?.setLabel(viewController.preferencesTitle(), forSegment: i)
+            segmentedControl?.setLabel(type(of: viewController).preferencesTitle, forSegment: i)
             segmentedControl?.setWidth(segmentSize.width, forSegment: i)
             if let cell = segmentedControl?.cell as? NSSegmentedCell {
                 i += 1;
@@ -296,7 +296,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         
         for viewController in viewControllers {
             
-            let title = viewController.preferencesTitle()
+            let title = type(of: viewController).preferencesTitle
             let titleSize = title.size(withAttributes: [NSFontAttributeName: NSFont.systemFont(ofSize: NSFont.systemFontSize(for: .regular))])
             
             if titleSize.width + CCNPreferencesToolbarSegmentedControlItemInset.width > maxSize.width {
@@ -328,7 +328,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
                         window?.title = CCNPreferencesDefaultTitle
                     }
                     else {
-                        window?.title = viewController.preferencesTitle() as String
+                        window?.title = type(of: viewController).preferencesTitle
                     }
                     
                     let newView = preferencesViewController.view
@@ -371,10 +371,10 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         
     }
     
-    fileprivate func viewControllerWithIdentifier(_ identifier: NSString) -> CCNPreferencesWindowControllerProtocol? {
+    fileprivate func viewControllerWithIdentifier(_ identifier: String) -> CCNPreferencesWindowControllerProtocol? {
         
         for viewController in viewControllers {
-            if viewController.preferencesIdentifier() == identifier as String {
+            if type(of: viewController).preferencesIdentifier == identifier {
                 return viewController
             }
         }
@@ -400,13 +400,14 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         }
         else {
             
-            if let viewController = viewControllerWithIdentifier(itemIdentifier as NSString) {
+            if let viewController = viewControllerWithIdentifier(itemIdentifier) {
+
+                let viewControllerType = type(of: viewController)
+                let identifier = viewControllerType.preferencesIdentifier
+                let label = viewControllerType.preferencesTitle
+                let icon = viewControllerType.preferencesIcon
                 
-                let identifier = viewController.preferencesIdentifier()
-                let label = viewController.preferencesTitle()
-                let icon = viewController.preferencesIcon()
-                
-                let toolbarItem = NSToolbarItem(itemIdentifier: identifier as String)
+                let toolbarItem = NSToolbarItem(itemIdentifier: identifier)
                 toolbarItem.label = label
                 toolbarItem.paletteLabel = label
                 toolbarItem.image = icon
@@ -446,7 +447,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
                 }
                 
                 for viewController in viewControllers {
-                    toolbarDefaultItemIdentifiers?.append(viewController.preferencesIdentifier())
+                    toolbarDefaultItemIdentifiers?.append(type(of: viewController).preferencesIdentifier)
                 }
                 
                 if centerToolbarItems {
@@ -475,26 +476,28 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     
     func toolbarItemAction(_ toolbarItem: NSToolbarItem) {
         
-        if  activeViewController != nil
-            && activeViewController!.preferencesIdentifier() != toolbarItem.itemIdentifier,
-            let viewController = viewControllerWithIdentifier(toolbarItem.itemIdentifier as NSString) {
-                activateViewController(viewController, animate: true)
+        if let activeViewController = activeViewController,
+            type(of: activeViewController).preferencesIdentifier != toolbarItem.itemIdentifier,
+            let viewController = viewControllerWithIdentifier(toolbarItem.itemIdentifier) {
+
+            activateViewController(viewController, animate: true)
         }
         
     }
     
     func segmentedControlAction(_ control: NSSegmentedControl) {
         
-        if  let cell = control.cell as? NSSegmentedCell {
+        guard let cell = control.cell as? NSSegmentedCell,
+            let activeViewController = self.activeViewController
+            else { return }
             
-            let viewController = viewControllers[cell.tag(forSegment: control.selectedSegment)]
+        let viewController = viewControllers[cell.tag(forSegment: control.selectedSegment)]
             
-            if activeViewController?.preferencesIdentifier() != viewController.preferencesIdentifier() {
-                activateViewController(viewController, animate: true)
-            }
-            
-        }
-        
+        guard type(of: activeViewController).preferencesIdentifier != type(of: viewController).preferencesIdentifier
+            else { return }
+
+        activateViewController(viewController, animate: true)
+
     }
     
 }

@@ -30,19 +30,19 @@ class AdvancedPreferencesController: NSViewController, CCNPreferencesWindowContr
     
     // MARK: - Preferences Panel Protocol
     
-    func preferencesIcon() -> NSImage {
-        
+    static var preferencesIcon: NSImage {
+
         return NSImage(named: NSImageNameAdvanced)!
         
     }
     
-    func preferencesIdentifier() -> String {
+    static var preferencesIdentifier: String {
         
         return "Advanced"
         
     }
     
-    func preferencesTitle() -> String {
+    static var preferencesTitle: String {
         
         return "Advanced"
         

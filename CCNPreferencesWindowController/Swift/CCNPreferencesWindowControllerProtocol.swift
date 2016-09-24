@@ -35,13 +35,13 @@ import AppKit
 @objc protocol CCNPreferencesWindowControllerProtocol {
     
     /// The identifier of the preference panel.
-    func preferencesIdentifier() -> String
+    static var preferencesIdentifier: String { get }
     
     /// The title of the preference panel.
-    func preferencesTitle() -> String
+    static var preferencesTitle: String { get }
     
     /// The icon of the preference panel.
-    func preferencesIcon() -> NSImage
+    static var preferencesIcon: NSImage { get }
     
     /// The preference panel's first responder
     @objc optional func firstResponder() -> NSResponder

@@ -32,19 +32,19 @@ class GeneralPreferencesController: NSViewController, CCNPreferencesWindowContro
     
     // MARK: - Preferences Panel Protocol
     
-    func preferencesIcon() -> NSImage {
+    static var preferencesIcon: NSImage {
         
         return NSImage(named: NSImageNamePreferencesGeneral)!
         
     }
     
-    func preferencesIdentifier() -> String {
+    static var preferencesIdentifier: String {
         
         return "General"
         
     }
     
-    func preferencesTitle() -> String {
+    static var preferencesTitle: String {
         
         return "General"
         
