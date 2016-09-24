@@ -175,7 +175,14 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     ////////////////////////////////////////////////////////////////////////////////
     
     // MARK: Show & Hide Preferences Window
-    
+
+    func showPreferencesWindow<T : CCNPreferencesWindowControllerProtocol>(selectedPreferencesOfType preferencesType: T.Type) {
+
+        let viewController = viewControllerWithIdentifier(preferencesType.preferencesIdentifier)
+        showPreferencesWindow(selectViewController: viewController)
+
+    }
+
     ///
     ///  Show the preferences window.
     ///
