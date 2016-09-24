@@ -194,9 +194,9 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
             
             if showToolbarItemsAsSegmentedControl {
                 segmentedControl?.selectSegment(withTag: 0)
-            }
-            else if toolbarDefaultItemIdentifiers != nil && toolbarDefaultItemIdentifiers!.count > 0 {
-                window?.toolbar!.selectedItemIdentifier = toolbarDefaultItemIdentifiers![(centerToolbarItems ? 1 : 0)]
+            } else if let toolbarDefaultItemIdentifiers = self.toolbarDefaultItemIdentifiers,
+                toolbarDefaultItemIdentifiers.count > 0 {
+                window?.toolbar!.selectedItemIdentifier = toolbarDefaultItemIdentifiers[(centerToolbarItems ? 1 : 0)]
             }
             
         }
@@ -313,66 +313,60 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     
     fileprivate func activateViewController(_ viewController: CCNPreferencesWindowControllerProtocol, animate: Bool) {
         
-        if let preferencesViewController = viewController as? NSViewController {
-            
-            let viewControllerFrame = preferencesViewController.view.frame
-            
-            if  let currentWindowFrame = window?.frame,
-                let frameRectForContentRect = window?.frameRect(forContentRect: viewControllerFrame) {
-                    
-                    let deltaX = NSWidth(currentWindowFrame) - NSWidth(frameRectForContentRect)
-                    let deltaY = NSHeight(currentWindowFrame) - NSHeight(frameRectForContentRect)
-                    let newWindowFrame = NSMakeRect(NSMinX(currentWindowFrame) + (centerToolbarItems ? deltaX / 2 : 0), NSMinY(currentWindowFrame) + deltaY, NSWidth(frameRectForContentRect), NSHeight(frameRectForContentRect))
-                    
-                    if showToolbarItemsAsSegmentedControl {
-                        window?.title = CCNPreferencesDefaultTitle
-                    }
-                    else {
-                        window?.title = type(of: viewController).preferencesTitle
-                    }
-                    
-                    let newView = preferencesViewController.view
-                    newView.frame.origin = NSMakePoint(0, 0)
-                    newView.alphaValue = 0.0
-                    newView.autoresizingMask = NSAutoresizingMaskOptions()
-                    
-                    if let previousViewController = activeViewController as? NSViewController {
-                        previousViewController.view.removeFromSuperview()
-                    }
-                    
-                    if allowsVibrancy {
-                        let effectView = NSVisualEffectView(frame: newView.frame)
-                        effectView.blendingMode = .behindWindow
-                        effectView.addSubview(newView)
-                        window?.contentView!.addSubview(effectView)
-                    }
-                    else {
-                        window?.contentView!.addSubview(newView)
-                    }
-                    
-                    if let firstResponder = viewController.firstResponder?() {
-                        window?.makeFirstResponder(firstResponder)
-                    }
-                    
-                    NSAnimationContext.runAnimationGroup({
-                        (context: NSAnimationContext) -> Void in
-                        context.duration = (animate ? 0.25 : 0.0)
-                        context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-                        self.window?.animator().setFrame(newWindowFrame, display: true)
-                        newView.animator().alphaValue = 1.0
-                        }) {
-                            () -> Void in
-                            self.activeViewController = viewController
-                    }
-                    
-            }
-            
+        guard let preferencesViewController = viewController as? NSViewController,
+            let window = self.window else { return }
+
+        let currentWindowFrame = window.frame
+        let frameRectForContentRect = window.frameRect(forContentRect: preferencesViewController.view.frame)
+                
+        let deltaX = NSWidth(currentWindowFrame) - NSWidth(frameRectForContentRect)
+        let deltaY = NSHeight(currentWindowFrame) - NSHeight(frameRectForContentRect)
+        let newWindowFrame = NSMakeRect(NSMinX(currentWindowFrame) + (centerToolbarItems ? deltaX / 2 : 0), NSMinY(currentWindowFrame) + deltaY, NSWidth(frameRectForContentRect), NSHeight(frameRectForContentRect))
+        
+        if showToolbarItemsAsSegmentedControl {
+            window.title = CCNPreferencesDefaultTitle
+        }
+        else {
+            window.title = type(of: viewController).preferencesTitle
         }
         
+        let newView = preferencesViewController.view
+        newView.frame.origin = NSMakePoint(0, 0)
+        newView.alphaValue = 0.0
+        newView.autoresizingMask = NSAutoresizingMaskOptions()
+        
+        if let previousViewController = activeViewController as? NSViewController {
+            previousViewController.view.removeFromSuperview()
+        }
+        
+        if allowsVibrancy {
+            let effectView = NSVisualEffectView(frame: newView.frame)
+            effectView.blendingMode = .behindWindow
+            effectView.addSubview(newView)
+            window.contentView!.addSubview(effectView)
+        }
+        else {
+            window.contentView!.addSubview(newView)
+        }
+        
+        if let firstResponder = viewController.firstResponder?() {
+            window.makeFirstResponder(firstResponder)
+        }
+        
+        NSAnimationContext.runAnimationGroup({
+            (context: NSAnimationContext) -> Void in
+            context.duration = (animate ? 0.25 : 0.0)
+            context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            self.window?.animator().setFrame(newWindowFrame, display: true)
+            newView.animator().alphaValue = 1.0
+            }) {
+                () -> Void in
+                self.activeViewController = viewController
+        }
     }
     
     fileprivate func viewControllerWithIdentifier(_ identifier: String) -> CCNPreferencesWindowControllerProtocol? {
-        
+
         for viewController in viewControllers {
             if type(of: viewController).preferencesIdentifier == identifier {
                 return viewController
