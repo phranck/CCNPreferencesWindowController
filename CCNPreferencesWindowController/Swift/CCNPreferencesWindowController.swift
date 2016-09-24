@@ -179,7 +179,10 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     ///
     ///  Show the preferences window.
     ///
-    func showPreferencesWindow() {
+    /// - parameter selectViewController: Segment to show initially. Defaults to `nil`, 
+    ///   which shows the first one.
+    ///
+    func showPreferencesWindow(selectViewController selectedViewController: CCNPreferencesWindowControllerProtocol? = nil) {
         
         if window!.isVisible {
             return
@@ -202,7 +205,9 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         }
         
         if activeViewController == nil {
-            activateViewController(viewControllers[0], animate:false)
+            let viewController = selectedViewController ?? viewControllers[0]
+            toolbar?.selectedItemIdentifier = type(of: viewController).preferencesIdentifier
+            activateViewController(viewController, animate: false)
             window?.center()
         }
         
@@ -367,14 +372,9 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     
     fileprivate func viewControllerWithIdentifier(_ identifier: String) -> CCNPreferencesWindowControllerProtocol? {
 
-        for viewController in viewControllers {
-            if type(of: viewController).preferencesIdentifier == identifier {
-                return viewController
-            }
-        }
-        
-        return nil
-        
+        return viewControllers
+            .filter({ type(of: $0).preferencesIdentifier == identifier })
+            .first
     }
     
     // MARK: Toolbar Delegate Protocol
@@ -470,12 +470,12 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     
     func toolbarItemAction(_ toolbarItem: NSToolbarItem) {
         
-        if let activeViewController = activeViewController,
+        guard let activeViewController = activeViewController,
             type(of: activeViewController).preferencesIdentifier != toolbarItem.itemIdentifier,
-            let viewController = viewControllerWithIdentifier(toolbarItem.itemIdentifier) {
+            let viewController = viewControllerWithIdentifier(toolbarItem.itemIdentifier)
+            else { return }
 
-            activateViewController(viewController, animate: true)
-        }
+        activateViewController(viewController, animate: true)
         
     }
     
