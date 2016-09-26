@@ -192,6 +192,7 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     func showPreferencesWindow(selectViewController selectedViewController: CCNPreferencesWindowControllerProtocol? = nil) {
         
         if window!.isVisible {
+            window?.makeKeyAndOrderFront(self)
             return
         }
         
