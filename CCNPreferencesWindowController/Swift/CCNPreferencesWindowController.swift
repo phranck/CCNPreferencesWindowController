@@ -211,15 +211,21 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
             
         }
 
-        if let viewController = selectedViewController {
-            activateViewController(viewController, animate: false)
-            window?.center()
-        } else if activeViewController == nil {
-            let viewController = viewControllers[0]
-            activateViewController(viewController, animate: false)
-            window?.center()
-        }
-        
+        let initialViewController: CCNPreferencesWindowControllerProtocol = {
+
+            if let selectedViewController = selectedViewController {
+                return selectedViewController
+            }
+
+            if let activeViewController = activeViewController {
+                return activeViewController
+            }
+
+            return viewControllers[0]
+        }()
+
+        activateViewController(initialViewController, animate: false)
+        window?.center()
         window?.alphaValue = 1.0
         
     }
