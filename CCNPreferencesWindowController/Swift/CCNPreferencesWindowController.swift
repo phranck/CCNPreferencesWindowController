@@ -191,23 +191,25 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
     ///
     func showPreferencesWindow(selectViewController selectedViewController: CCNPreferencesWindowControllerProtocol? = nil) {
         
-        if window!.isVisible {
-            window?.makeKeyAndOrderFront(self)
+        guard let window = window else { preconditionFailure("window not set up") }
+
+        if window.isVisible {
+            showWindow(self)
             return
         }
-        
-        window?.alphaValue = 0.0
+
+        window.alphaValue = 0.0
         showWindow(self)
-        window?.makeKeyAndOrderFront(self)
+        window.makeKeyAndOrderFront(self)
         NSApplication.shared().activate(ignoringOtherApps: true)
         
-        if window?.toolbar != nil {
+        if let toolbar = window.toolbar {
             
             if showToolbarItemsAsSegmentedControl {
                 segmentedControl?.selectSegment(withTag: 0)
             } else if let toolbarDefaultItemIdentifiers = self.toolbarDefaultItemIdentifiers,
                 toolbarDefaultItemIdentifiers.count > 0 {
-                window?.toolbar!.selectedItemIdentifier = toolbarDefaultItemIdentifiers[(centerToolbarItems ? 1 : 0)]
+                toolbar.selectedItemIdentifier = toolbarDefaultItemIdentifiers[(centerToolbarItems ? 1 : 0)]
             }
             
         }
@@ -226,8 +228,8 @@ class CCNPreferencesWindowController : NSWindowController, NSToolbarDelegate, NS
         }()
 
         activateViewController(initialViewController, animate: false)
-        window?.center()
-        window?.alphaValue = 1.0
+        window.center()
+        window.alphaValue = 1.0
         
     }
 
