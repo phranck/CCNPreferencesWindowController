@@ -1,2 +1,4 @@
 language: objective-c
+xcode_project: Example/PreferencesControllerTest.xcodeproj
+xcode_scheme: PreferencesControllerTest
 
