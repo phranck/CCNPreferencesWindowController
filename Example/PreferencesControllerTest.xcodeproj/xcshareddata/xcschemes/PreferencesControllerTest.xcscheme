@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FD8F55531A6D0482002A9335"
-               BuildableName = "PreferencesControllerTest-ObjC.app"
-               BlueprintName = "PreferencesControllerTest-ObjC"
-               ReferencedContainer = "container:PreferencesControllerTest-ObjC.xcodeproj">
+               BuildableName = "PreferencesControllerTest.app"
+               BlueprintName = "PreferencesControllerTest"
+               ReferencedContainer = "container:PreferencesControllerTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FD8F55531A6D0482002A9335"
-            BuildableName = "PreferencesControllerTest-ObjC.app"
-            BlueprintName = "PreferencesControllerTest-ObjC"
-            ReferencedContainer = "container:PreferencesControllerTest-ObjC.xcodeproj">
+            BuildableName = "PreferencesControllerTest.app"
+            BlueprintName = "PreferencesControllerTest"
+            ReferencedContainer = "container:PreferencesControllerTest.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FD8F55531A6D0482002A9335"
-            BuildableName = "PreferencesControllerTest-ObjC.app"
-            BlueprintName = "PreferencesControllerTest-ObjC"
-            ReferencedContainer = "container:PreferencesControllerTest-ObjC.xcodeproj">
+            BuildableName = "PreferencesControllerTest.app"
+            BlueprintName = "PreferencesControllerTest"
+            ReferencedContainer = "container:PreferencesControllerTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FD8F55531A6D0482002A9335"
-            BuildableName = "PreferencesControllerTest-ObjC.app"
-            BlueprintName = "PreferencesControllerTest-ObjC"
-            ReferencedContainer = "container:PreferencesControllerTest-ObjC.xcodeproj">
+            BuildableName = "PreferencesControllerTest.app"
+            BlueprintName = "PreferencesControllerTest"
+            ReferencedContainer = "container:PreferencesControllerTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

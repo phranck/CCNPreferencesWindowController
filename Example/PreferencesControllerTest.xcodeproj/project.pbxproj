@@ -39,7 +39,7 @@
 		FD3C5DDE1CAAFD5900458AC9 /* CCNPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowController.h; sourceTree = "<group>"; };
 		FD3C5DDF1CAAFD5900458AC9 /* CCNPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNPreferencesWindowController.m; sourceTree = "<group>"; };
 		FD4476BE1CAAFE7900AE283F /* CCNPreferencesWindowControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNPreferencesWindowControllerProtocol.h; sourceTree = "<group>"; };
-		FD8F55541A6D0482002A9335 /* PreferencesControllerTest-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PreferencesControllerTest-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD8F55541A6D0482002A9335 /* PreferencesControllerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreferencesControllerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 		FD8F55551A6D0482002A9335 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FD8F55541A6D0482002A9335 /* PreferencesControllerTest-ObjC.app */,
+				FD8F55541A6D0482002A9335 /* PreferencesControllerTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FD8F55531A6D0482002A9335 /* PreferencesControllerTest-ObjC */ = {
+		FD8F55531A6D0482002A9335 /* PreferencesControllerTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD8F55711A6D0482002A9335 /* Build configuration list for PBXNativeTarget "PreferencesControllerTest-ObjC" */;
+			buildConfigurationList = FD8F55711A6D0482002A9335 /* Build configuration list for PBXNativeTarget "PreferencesControllerTest" */;
 			buildPhases = (
 				FD8F55501A6D0482002A9335 /* Sources */,
 				FD8F55511A6D0482002A9335 /* Frameworks */,
@@ -135,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = "PreferencesControllerTest-ObjC";
+			name = PreferencesControllerTest;
 			productName = "CCNPreferencesWindowController Example";
-			productReference = FD8F55541A6D0482002A9335 /* PreferencesControllerTest-ObjC.app */;
+			productReference = FD8F55541A6D0482002A9335 /* PreferencesControllerTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FD8F554F1A6D0482002A9335 /* Build configuration list for PBXProject "PreferencesControllerTest-ObjC" */;
+			buildConfigurationList = FD8F554F1A6D0482002A9335 /* Build configuration list for PBXProject "PreferencesControllerTest" */;
 			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -167,7 +167,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FD8F55531A6D0482002A9335 /* PreferencesControllerTest-ObjC */,
+				FD8F55531A6D0482002A9335 /* PreferencesControllerTest */,
 			);
 		};
 /* End PBXProject section */
@@ -299,8 +299,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/PreferencesControllerTest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cocoanaut.PreferencesControllerTest-ObjC";
-				PRODUCT_NAME = "PreferencesControllerTest-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocoanaut.PreferencesControllerTest;
+				PRODUCT_NAME = PreferencesControllerTest;
 			};
 			name = Debug;
 		};
@@ -311,15 +311,15 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/PreferencesControllerTest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cocoanaut.PreferencesControllerTest-ObjC";
-				PRODUCT_NAME = "PreferencesControllerTest-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocoanaut.PreferencesControllerTest;
+				PRODUCT_NAME = PreferencesControllerTest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD8F554F1A6D0482002A9335 /* Build configuration list for PBXProject "PreferencesControllerTest-ObjC" */ = {
+		FD8F554F1A6D0482002A9335 /* Build configuration list for PBXProject "PreferencesControllerTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD8F556F1A6D0482002A9335 /* Debug */,
@@ -328,7 +328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD8F55711A6D0482002A9335 /* Build configuration list for PBXNativeTarget "PreferencesControllerTest-ObjC" */ = {
+		FD8F55711A6D0482002A9335 /* Build configuration list for PBXNativeTarget "PreferencesControllerTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FD8F55721A6D0482002A9335 /* Debug */,
