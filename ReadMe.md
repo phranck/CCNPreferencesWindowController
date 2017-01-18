@@ -1,3 +1,5 @@
+![CocoaPod version](https://img.shields.io/cocoapods/v/CCNPreferencesWindowController.svg?style=flat)
+![Travis CI build status](https://travis-ci.org/phranck/CCNPreferencesWindowController.svg?branch=develop)
 
 ### Overview
 
