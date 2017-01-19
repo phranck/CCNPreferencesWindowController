@@ -1,5 +1,6 @@
 ![CocoaPod version](https://img.shields.io/cocoapods/v/CCNPreferencesWindowController.svg?style=flat)
 ![Travis CI build status](https://travis-ci.org/phranck/CCNPreferencesWindowController.svg?branch=develop)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ### Overview
 
