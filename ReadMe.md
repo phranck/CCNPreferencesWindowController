@@ -11,13 +11,23 @@ Here is a shot of the included example application:
 ![CCNPreferencesWindowController Example Application](https://dl.dropbox.com/u/34133216/WebImages/Github/CCNPreferencesWindowController.gif)
 
 
-### Integration
+### CocoaPods
 
 You can add `CCNPreferencesWindowController` by using CocoaPods. Just add this line to your Podfile:
 
 ```
 pod 'CCNPreferencesWindowController'
 ```
+
+### Carthage
+
+Add `CCNPreferencesWindowController` to your Cartfile to have it installed by Carthage.
+
+```
+github "phranck/CCNPreferencesWindowController" >= 1.4.3
+```
+
+Build it by running the command `carthage update`, then drag `CCNPreferencesWindowController.framework` into your Xcode project.
 
 
 ### Usage
