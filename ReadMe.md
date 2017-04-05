@@ -8,7 +8,7 @@
 
 Here is a shot of the included example application:
 
-![CCNPreferencesWindowController Example Application](https://dl.dropbox.com/u/34133216/WebImages/Github/CCNPreferencesWindowController.gif)
+![CCNPreferencesWindowController Example Application](https://cocoanaut.com/files/webImages/github/CCNPreferencesWindowController.gif)
 
 
 ### CocoaPods
