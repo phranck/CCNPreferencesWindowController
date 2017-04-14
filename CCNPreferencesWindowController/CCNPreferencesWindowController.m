@@ -407,7 +407,7 @@ static unsigned short const CCNEscapeKey = 53;
 
 - (instancetype)init {
     self = [super initWithContentRect:CCNPreferencesDefaultWindowRect
-                            styleMask:(NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSUnifiedTitleAndToolbarWindowMask)
+							styleMask:(NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskUnifiedTitleAndToolbar)
                               backing:NSBackingStoreBuffered
                                 defer:YES];
     if (self) {
