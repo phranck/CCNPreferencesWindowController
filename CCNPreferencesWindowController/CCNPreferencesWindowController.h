@@ -155,4 +155,9 @@ preferences.centerToolbarItems = YES;
  */
 - (void)dismissPreferencesWindow;
 
+/**
+ Activates the given view controller.
+ */
+- (void)activateViewController:(id<CCNPreferencesWindowControllerProtocol>)viewController animate:(BOOL)animate;
+
 @end
